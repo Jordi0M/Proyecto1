@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Cuestionario</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" defer src="functions.js"></script>
 </head>
 <body>
 	<h1>Cuestionario</h1>
 	<form>
 		<div>
-			<fieldset> 
+			<fieldset id="myForm"> 
 				<legend>Pregunta 1
-					<button type="Reset" value="reset1" onclick="myFunction()"><img src="reload.png" height="13" width="13"></button>
-					<button type="submit"><img src="check.png" height="13" width="13"></button>
+					<button type="Reset" value="Reset value" onclick="myReset()"><img class="topButton" src="reload.png"></button>
+					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 1</p>
 						<input type="radio" name="1" on>Respuesta<br>
@@ -23,8 +24,8 @@
 		<div>
 			<fieldset> 
 				<legend>Pregunta 2
-					<button type="Reset"><img src="reload.png" height="13" width="13"></button>
-					<button type="submit"><img src="check.png" height="13" width="13"></button>
+					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
+					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto pregunta 2</p>
 						<input type="radio" name="2">Verdadero<br>
@@ -35,8 +36,8 @@
 		<div>
 			<fieldset> 
 				<legend>Pregunta 3
-					<button type="Reset"><img src="reload.png" height="13" width="13"></button>
-					<button type="submit"><img src="check.png" height="13" width="13"></button>
+					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
+					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 3</p>
 						<textarea rows="4" cols="50"></textarea>
@@ -47,5 +48,3 @@
 </form>
 </body>
 </html>
-
-https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_reset
