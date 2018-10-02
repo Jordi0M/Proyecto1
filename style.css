@@ -2,6 +2,11 @@ body{
 	width: 50%;
 
 }
-button:hover {
+.question:hover {
     background-color: yellow;
+}
+
+.topButton {
+	height: 13px;
+	width: 13px;
 }
