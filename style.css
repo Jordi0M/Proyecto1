@@ -1,7 +1,7 @@
 body{
-	width: 50%;
-
+	width: 90%;
 }
+
 .question:hover {
     background-color: yellow;
 }
@@ -9,4 +9,8 @@ body{
 .topButton {
 	height: 13px;
 	width: 13px;
+}
+
+.contenedor1, .contenedor2, .contenedor3 {
+	width: 40%;
 }
