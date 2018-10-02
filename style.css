@@ -14,3 +14,8 @@ body{
 .contenedor1, .contenedor2, .contenedor3 {
 	width: 40%;
 }
+
+#oculto1, #oculto2, #oculto3, #oculto4, #oculto5{
+	height: 20px;
+	float:right;	
+}
