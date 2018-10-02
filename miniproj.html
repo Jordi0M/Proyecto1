@@ -8,43 +8,46 @@
 <body>
 	<h1>Cuestionario</h1>
 	<form>
-		<div>
+		<div class="contenedor1">
 			<fieldset id="myForm"> 
 				<legend>Pregunta 1
 					<button type="Reset" value="Reset value" onclick="myReset()"><img class="topButton" src="reload.png"></button>
 					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 1</p>
-						<input type="radio" name="1" on>Respuesta<br>
-						<input type="radio" name="1">Respuesta<br>
-						<input type="radio" name="1">Respuesta<br>
-						<p>Intento:</p>
+					<p class="question"><input name="question1" type="radio" value="1">texto</p> {icono correcto/incorrecto}
+					<p class="question"><input name="question2" type="radio" value="2">texto</p>
+					<p class="question"><input name="question3" type="radio" value="3">texto</p>
+					<p>Intento:</p>
 				</fieldset>
 		</div>
-		<div>
+		<div class="contenedor2">
 			<fieldset> 
 				<legend>Pregunta 2
 					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
 					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto pregunta 2</p>
-						<input type="radio" name="2">Verdadero<br>
-						<input type="radio" name="2">Falso<br>
-						<p>Intento:</p>
+					<p class="question"><input name="Truest" type="radio" value="1">texto</p>
+					<p class="question"><input name="Falsest" type="radio" value="2">texto</p>
+					<p>Intento:</p>
 			</fieldset>
 		</div>
-		<div>
+		<div class="contenedor3">
 			<fieldset> 
 				<legend>Pregunta 3
 					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
 					<button type="submit"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 3</p>
-						<textarea rows="4" cols="50"></textarea>
-						<p>Intento:</p>
+					<textarea>Escribe tu respuesta!</textarea> <br>
+					<textarea disabled="true">La Respuesta era esta!</textarea>
+					<p>Intento:</p>
 			</fieldset>
 		</div>
-
+		<div>
+			<h3 class="tryedGlobal">Intentos Globales: </h3>
+		</div>
 </form>
 </body>
 </html>
