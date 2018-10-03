@@ -10,6 +10,10 @@ button:hover {
 	background-color: orange; 
 }
 
+input:checked {
+	background-color: black;	
+}
+
 .topButton {
 	height: 13px;
 	width: 13px;
