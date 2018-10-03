@@ -5,10 +5,15 @@ body{
 .question:hover {
     background-color: #a9ffd4;
 }
+.question:checked{
+	background-color: red;
+
+}
 
 button:hover {
 	filter: invert(100%);
 }
+
 
 .topButton {
 	height: 13px;
