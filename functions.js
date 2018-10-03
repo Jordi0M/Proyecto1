@@ -19,7 +19,14 @@ function myFunction2(){
 	document.getElementById('oculto5').style.display = 'none';
 	document.getElementById('cuarto').disabled = false;
 	document.getElementById('quinto').disabled = false;
-	document.getElementById("myForm").reset();
+	document.getElementById("myForm2").reset();
+}
+
+function myFunction3(){
+	document.getElementById('respuestaVerdadera').hidden = true;
+	document.getElementById('oculto6').style.display = 'none';
+	document.getElementById('oculto7').style.display = 'none';
+	document.getElementById("myForm3").reset();
 }
 
 function mostrar(){
@@ -49,3 +56,17 @@ function mostrar2(){
 	document.getElementById('quinto').disabled = true;
 }
 
+function mostrar3(){
+	document.getElementById('respuestaVerdadera').hidden = false;
+	/*Esto no funciona*/
+	/*
+	var pass1 = document.getElementById("respuesta").value;
+	var pass2 = document.getElementById("respuestaVerdadera").value;
+	if (pass1.innerHTML == pass2.innerHTML){
+		document.getElementById('oculto6').style.display = 'block';
+	}
+	else{
+		document.getElementById('oculto7').style.display = 'block';
+	}
+	*/
+}

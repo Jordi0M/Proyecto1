@@ -33,7 +33,7 @@
 	</form>
 	<form>
 		<div class="contenedor2">
-			<fieldset> 
+			<fieldset id="myForm2"> 
 				<legend>Pregunta 2
 					<button type="Reset" value="reset1" onclick="myFunction2()"><img class="topButton" src="reload.png"></button>
 					<button type="button" onclick="mostrar2()"><img class="topButton" src="check.png"></button>
@@ -51,13 +51,16 @@
 	</form>
 	<form>
 		<div class="contenedor3">
-			<fieldset> 
+			<fieldset id="myForm3"> 
 				<legend>Pregunta 3
-					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
-					<button type="button"><img class="topButton" src="check.png"></button>
+					<button type="Reset" value="reset1" onclick="myFunction3()"><img class="topButton" src="reload.png"></button>
+					<button type="button" onclick="mostrar3()"><img class="topButton" src="check.png"></button>
 				</legend>
-					<p>Texto de pregunta 3</p>
-					<textarea>Escribe tu respuesta!</textarea> <br>
+					<p>Texto de pregunta 3
+						<img style="display:none;" id="oculto6" src="correcto.png">
+						<img style="display:none;" id="oculto7" src="incorrecto.png">
+					</p>
+					<textarea id="respuesta">Escribe tu respuesta!</textarea> <br>
 					<textarea id="respuestaVerdadera" hidden="true" disabled="true">La Respuesta era esta!</textarea>
 					<p>Intento:</p>
 			</fieldset>
