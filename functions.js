@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 function contador() {
 	counter = 0;
 	document.getElementsByClassName('contador1').innerHTML =document.getElementsByClassName('contador1').innerHTML + counter;
 	counter+=1;
 }
-=======
+
 function myFunction(){
 	document.getElementById('oculto1').style.display = 'none';
 	document.getElementById('oculto2').style.display = 'none';
@@ -38,5 +37,3 @@ function mostrar2(){
 	document.getElementById('oculto5').style.display = 'block';
 	}
 }
-
->>>>>>> b231b6970f85287ce0eda60e9d4677b5ad108dc8
