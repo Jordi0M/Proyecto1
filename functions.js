@@ -48,3 +48,4 @@ function mostrar2(){
 	document.getElementById('cuarto').disabled = true;
 	document.getElementById('quinto').disabled = true;
 }
+
