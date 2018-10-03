@@ -3,7 +3,11 @@ body{
 }
 
 .question:hover {
-    background-color: yellow;
+    background-color: #d2ff83;
+}
+
+button:hover {
+	background-color: orange; 
 }
 
 .topButton {

@@ -11,25 +11,25 @@
 		<div class="contenedor1">
 			<fieldset id="myForm"> 
 				<legend>Pregunta 1
-					<button type="Reset" value="Reset value" onclick="myReset()"><img class="topButton" src="reload.png"></button>
-					<button type="submit"><img class="topButton" src="check.png"></button>
+					<button type="Reset" value="Reset value"><img class="topButton" src="reload.png"></button>
+					<button type="button" onclick="contador()"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 1</p>
 					<p class="question"><input name="question1" type="radio" value="1">texto</p> {icono correcto/incorrecto}
-					<p class="question"><input name="question2" type="radio" value="2">texto</p>
-					<p class="question"><input name="question3" type="radio" value="3">texto</p>
-					<p>Intento:</p>
+					<p class="question"><input name="question1" type="radio" value="2">texto</p>
+					<p class="question"><input name="question1" type="radio" value="3">texto</p>
+					<p class="contador1">Intento:</p>
 				</fieldset>
 		</div>
 		<div class="contenedor2">
 			<fieldset> 
 				<legend>Pregunta 2
-					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
-					<button type="submit"><img class="topButton" src="check.png"></button>
+					<button type="Reset" value="reset1"><img class="topButton" src="reload.png"></button>
+					<button type="submit" onclick="contador()"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto pregunta 2</p>
-					<p class="question"><input name="Truest" type="radio" value="1">texto</p>
-					<p class="question"><input name="Falsest" type="radio" value="2">texto</p>
+					<p class="question"><input name="question2" type="radio" value="1">texto</p>
+					<p class="question"><input name="question2" type="radio" value="2">texto</p>
 					<p>Intento:</p>
 			</fieldset>
 		</div>
@@ -37,11 +37,11 @@
 			<fieldset> 
 				<legend>Pregunta 3
 					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
-					<button type="submit"><img class="topButton" src="check.png"></button>
+					<button type="button"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 3</p>
 					<textarea>Escribe tu respuesta!</textarea> <br>
-					<textarea disabled="true">La Respuesta era esta!</textarea>
+					<textarea id="respuestaVerdadera" hidden="true" disabled="true">La Respuesta era esta!</textarea>
 					<p>Intento:</p>
 			</fieldset>
 		</div>
