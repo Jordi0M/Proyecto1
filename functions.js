@@ -1,37 +1,51 @@
-function contador() {
-	counter = 0;
-	document.getElementsByClassName('contador1').innerHTML =document.getElementsByClassName('contador1').innerHTML + counter;
-	counter+=1;
+/* 			<=== Variables ===> */
+global contadorPregunta1 = 1;
+global contadorPregunta2 = 1
+global contadorPreguntasTotales = 1;
+
+/* 			<=== FUNCIONES ===> */
+function getButtonId() {
+	//pilla el id del botón, devuelve un valor sí o sí
 }
 
-function myFunction(){
+function contador() {
+	//id = getButtonId();
+	id = 0;
+	document.getElementsByClassName('contador')[id].getText = 
+		document.getElementsByClassName('contador')[id].getText + contadorPregunta1;
+	contadorPregunta1+=1;
+}
+
+function refresh1(){
 	document.getElementById('oculto1').style.display = 'none';
 	document.getElementById('oculto2').style.display = 'none';
 	document.getElementById('oculto3').style.display = 'none';
 	document.getElementById('primero').disabled = false;
 	document.getElementById('segundo').disabled = false;
 	document.getElementById('tercero').disabled = false;
-    document.getElementById("myForm").reset();
+    //document.getElementById("myForm").reset();
 }
 
-function myFunction2(){
+function refresh2(){
 	document.getElementById('oculto4').style.display = 'none';
 	document.getElementById('oculto5').style.display = 'none';
 	document.getElementById('cuarto').disabled = false;
 	document.getElementById('quinto').disabled = false;
-	document.getElementById("myForm2").reset();
+	//document.getElementById("myForm2").reset();
 }
 
-function myFunction3(){
+function refresh3(){
 	document.getElementById('respuestaVerdadera').hidden = true;
 	document.getElementById('oculto6').style.display = 'none';
 	document.getElementById('oculto7').style.display = 'none';
+	//
 	document.getElementById("myForm3").reset();
 }
 
-function mostrar(){
+function validar1(){
 	if(document.getElementById('primero').checked) {
-		//document.getElementById('oculto1').style.color = 'green'; <--- Esto es para que se muestre la <p> de color verde
+		//document.getElementById('oculto1').style.color = 'green'; <--- Esto es para que se muestre
+			//la <p> de color verde
 		document.getElementById('oculto1').style.display = 'block';
 	}
 	if(document.getElementById('segundo').checked) {
@@ -46,28 +60,17 @@ function mostrar(){
 
 }
 
-function mostrar2(){
+function validar2(){
 	if(document.getElementById('cuarto').checked) {
-	document.getElementById('oculto4').style.display = 'block';
+		document.getElementById('oculto4').style.display = 'block';
 	}
 	if(document.getElementById('quinto').checked) {
-	document.getElementById('oculto5').style.display = 'block';
+		document.getElementById('oculto5').style.display = 'block';
 	}
 	document.getElementById('cuarto').disabled = true;
 	document.getElementById('quinto').disabled = true;
 }
 
-function mostrar3(){
+function validar3(){
 	document.getElementById('respuestaVerdadera').hidden = false;
-	/*Esto no funciona*/
-	/*
-	var pass1 = document.getElementById("respuesta").value;
-	var pass2 = document.getElementById("respuestaVerdadera").value;
-	if (pass1.innerHTML == pass2.innerHTML){
-		document.getElementById('oculto6').style.display = 'block';
-	}
-	else{
-		document.getElementById('oculto7').style.display = 'block';
-	}
-	*/
 }
