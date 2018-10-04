@@ -23,7 +23,14 @@ function refresh1(){
 	document.getElementById('primero').disabled = false;
 	document.getElementById('segundo').disabled = false;
 	document.getElementById('tercero').disabled = false;
+<<<<<<< HEAD
     //document.getElementById("myForm").reset();
+=======
+	document.getElementById('p1').style.backgroundColor = '#ffffff';
+	document.getElementById('p2').style.backgroundColor = '#ffffff';
+	document.getElementById('p3').style.backgroundColor = '#ffffff';
+    document.getElementById("myForm").reset();
+>>>>>>> 349257a5ba96e6653cb805ec7860238098ae1673
 }
 
 function refresh2(){
@@ -31,7 +38,13 @@ function refresh2(){
 	document.getElementById('oculto5').style.display = 'none';
 	document.getElementById('cuarto').disabled = false;
 	document.getElementById('quinto').disabled = false;
+<<<<<<< HEAD
 	//document.getElementById("myForm2").reset();
+=======
+	document.getElementById('p4').style.backgroundColor = '#ffffff';
+	document.getElementById('p5').style.backgroundColor = '#ffffff';
+	document.getElementById("myForm2").reset();
+>>>>>>> 349257a5ba96e6653cb805ec7860238098ae1673
 }
 
 function refresh3(){
@@ -44,15 +57,22 @@ function refresh3(){
 
 function validar1(){
 	if(document.getElementById('primero').checked) {
+<<<<<<< HEAD
 		//document.getElementById('oculto1').style.color = 'green'; <--- Esto es para que se muestre
 			//la <p> de color verde
+=======
+>>>>>>> 349257a5ba96e6653cb805ec7860238098ae1673
 		document.getElementById('oculto1').style.display = 'block';
+		document.getElementById('p1').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
+
 	}
 	if(document.getElementById('segundo').checked) {
 		document.getElementById('oculto2').style.display = 'block';
+		document.getElementById('p2').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
 	}
 	if(document.getElementById('tercero').checked) {
 		document.getElementById('oculto3').style.display = 'block';
+		document.getElementById('p3').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
 	}
 	document.getElementById('primero').disabled = true;
 	document.getElementById('segundo').disabled = true;
@@ -63,9 +83,19 @@ function validar1(){
 function validar2(){
 	if(document.getElementById('cuarto').checked) {
 		document.getElementById('oculto4').style.display = 'block';
+<<<<<<< HEAD
 	}
 	if(document.getElementById('quinto').checked) {
 		document.getElementById('oculto5').style.display = 'block';
+=======
+		document.getElementById('p4').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
+
+	}
+	if(document.getElementById('quinto').checked) {
+		document.getElementById('oculto5').style.display = 'block';
+		document.getElementById('p5').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
+
+>>>>>>> 349257a5ba96e6653cb805ec7860238098ae1673
 	}
 	document.getElementById('cuarto').disabled = true;
 	document.getElementById('quinto').disabled = true;
