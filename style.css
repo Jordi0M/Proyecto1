@@ -7,11 +7,10 @@ h1{
 }
 .radioBoton:hover {
     background-color: #a9ffd4;
-
 }
+
 .question:checked{
 	background-color: red;
-
 }
 
 button:hover {
