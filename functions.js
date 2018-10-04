@@ -62,7 +62,7 @@ function mostrar2(){
 	}
 	if(document.getElementById('quinto').checked) {
 		document.getElementById('oculto5').style.display = 'block';
-		document.getElementById('<p5></p5>').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
+		document.getElementById('p5').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
 
 	}
 	document.getElementById('cuarto').disabled = true;
