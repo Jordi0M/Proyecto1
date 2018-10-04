@@ -15,17 +15,17 @@
 					<button type="button" onclick="mostrar()"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto de pregunta 1</p>
-					<input id="primero" name="question1" type="radio" value="1">
+					<p class="radioBoton1"><input id="primero" name="question1" type="radio" value="1">
 					<label for="texto1">texto1</label>
-						<img style="display:none;" id="oculto1" src="correcto.png"> <br>
+						<img style="display:none;" id="oculto1" src="correcto.png"></p>
 					 
-					<input id="segundo" name="question1" type="radio" value="2">
+					<p class="radioBoton2"><input id="segundo" name="question1" type="radio" value="2">
 					<label for="texto2">texto2</label>
-						<img style="display:none;" id="oculto2" src="incorrecto.png"> <br>
+						<img style="display:none;" id="oculto2" src="incorrecto.png"></p>
 
-					<input id="tercero" name="question1" type="radio" value="3">
+					<p class="radioBoton3"><input id="tercero" name="question1" type="radio" value="3">
 					<label for="texto3">texto3</label>
-						<img style="display:none;" id="oculto3" src="incorrecto.png"> <br>
+						<img style="display:none;" id="oculto3" src="incorrecto.png"></p>
 					
 					<p>Intento:</p>	
 				</fieldset>
@@ -33,16 +33,18 @@
 	</form>
 	<form>
 		<div class="contenedor2">
-			<fieldset> 
+			<fieldset id="myForm2"> 
 				<legend>Pregunta 2
 					<button type="Reset" value="reset1" onclick="myFunction2()"><img class="topButton" src="reload.png"></button>
 					<button type="button" onclick="mostrar2()"><img class="topButton" src="check.png"></button>
 				</legend>
 					<p>Texto pregunta 2</p>
-					<p class="question"><input id="cuarto" name="question2" type="radio" value="1">texto
+					<p class="radioBoton4"><input id="cuarto" name="question2" type="radio" value="1">
+					<label for="verdadero">Verdadero</label>
 						<img style="display:none;" id="oculto4" src="incorrecto.png">
 					</p>
-					<p class="question"><input id="quinto" name="question2" type="radio" value="2">texto
+					<p class="radioBoton5"><input id="quinto" name="question2" type="radio" value="2">
+					<label for="falso">Falso</label>
 						<img style="display:none;" id="oculto5" src="correcto.png">
 					</p>
 					<p>Intento:</p>
@@ -51,13 +53,16 @@
 	</form>
 	<form>
 		<div class="contenedor3">
-			<fieldset> 
+			<fieldset id="myForm3"> 
 				<legend>Pregunta 3
-					<button type="Reset" value="reset1" onclick="myFunction()"><img class="topButton" src="reload.png"></button>
-					<button type="button"><img class="topButton" src="check.png"></button>
+					<button type="Reset" value="reset1" onclick="myFunction3()"><img class="topButton" src="reload.png"></button>
+					<button type="button" onclick="mostrar3()"><img class="topButton" src="check.png"></button>
 				</legend>
-					<p>Texto de pregunta 3</p>
-					<textarea>Escribe tu respuesta!</textarea> <br>
+					<p>Texto de pregunta 3
+						<img style="display:none;" id="oculto6" src="correcto.png">
+						<img style="display:none;" id="oculto7" src="incorrecto.png">
+					</p>
+					<textarea id="respuesta">Escribe tu respuesta!</textarea> <br>
 					<textarea id="respuestaVerdadera" hidden="true" disabled="true">La Respuesta era esta!</textarea>
 					<p>Intento:</p>
 			</fieldset>

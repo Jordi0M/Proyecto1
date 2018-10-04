@@ -2,7 +2,7 @@ body{
 	width: 90%;
 }
 
-label:hover {
+.radioBoton:hover {
     background-color: #a9ffd4;
 }
 .question:checked{
@@ -15,8 +15,11 @@ button:hover {
 }
 
 input[type="radio"]:checked + label {
-	background-color: #20ff8f;
+	background-color: #20f8ff;
+}
 
+fieldset {
+	border-radius: 5%;
 }
 
 .topButton {
