@@ -24,13 +24,14 @@ function myFunction2(){
 
 function mostrar(){
 	if(document.getElementById('primero').checked) {
-	document.getElementById('oculto1').style.display = 'block';
+		//document.getElementById('oculto1').style.color = 'green'; <--- Esto es para que se muestre la <p> de color verde
+		document.getElementById('oculto1').style.display = 'block';
 	}
 	if(document.getElementById('segundo').checked) {
-	document.getElementById('oculto2').style.display = 'block';
+		document.getElementById('oculto2').style.display = 'block';
 	}
 	if(document.getElementById('tercero').checked) {
-	document.getElementById('oculto3').style.display = 'block';
+		document.getElementById('oculto3').style.display = 'block';
 	}
 	document.getElementById('primero').disabled = true;
 	document.getElementById('segundo').disabled = true;
