@@ -1,21 +1,4 @@
-/* 			<=== Variables ===> */
-global contadorPregunta1 = 1;
-global contadorPregunta2 = 1
-global contadorPreguntasTotales = 1;
-
 /* 			<=== FUNCIONES ===> */
-function getButtonId() {
-	//pilla el id del botón, devuelve un valor sí o sí
-}
-
-function contador() {
-	//id = getButtonId();
-	id = 0;
-	document.getElementsByClassName('contador')[id].getText = 
-		document.getElementsByClassName('contador')[id].getText + contadorPregunta1;
-	contadorPregunta1+=1;
-}
-
 function refresh1(){
 	document.getElementById('p1').style.backgroundColor = '#ffffff';
 	document.getElementById('p2').style.backgroundColor = '#ffffff';
