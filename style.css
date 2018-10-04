@@ -16,11 +16,11 @@ h1{
 button:hover {
 	filter: invert(100%);
 }
-
+/*
 input[type="radio"]:checked + label {
 	background-color: #20f8ff;
 }
-
+*/
 fieldset {
 	border-radius: 5%;
 	background-color: white;

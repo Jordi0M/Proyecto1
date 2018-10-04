@@ -12,6 +12,9 @@ function myFunction(){
 	document.getElementById('primero').disabled = false;
 	document.getElementById('segundo').disabled = false;
 	document.getElementById('tercero').disabled = false;
+	document.getElementById('p1').style.backgroundColor = '#ffffff';
+	document.getElementById('p2').style.backgroundColor = '#ffffff';
+	document.getElementById('p3').style.backgroundColor = '#ffffff';
     document.getElementById("myForm").reset();
 }
 
@@ -20,6 +23,8 @@ function myFunction2(){
 	document.getElementById('oculto5').style.display = 'none';
 	document.getElementById('cuarto').disabled = false;
 	document.getElementById('quinto').disabled = false;
+	document.getElementById('p4').style.backgroundColor = '#ffffff';
+	document.getElementById('p5').style.backgroundColor = '#ffffff';
 	document.getElementById("myForm2").reset();
 }
 
@@ -32,14 +37,17 @@ function myFunction3(){
 
 function mostrar(){
 	if(document.getElementById('primero').checked) {
-		//document.getElementById('oculto1').style.color = 'green'; <--- Esto es para que se muestre la <p> de color verde
 		document.getElementById('oculto1').style.display = 'block';
+		document.getElementById('p1').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
+
 	}
 	if(document.getElementById('segundo').checked) {
 		document.getElementById('oculto2').style.display = 'block';
+		document.getElementById('p2').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
 	}
 	if(document.getElementById('tercero').checked) {
 		document.getElementById('oculto3').style.display = 'block';
+		document.getElementById('p3').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
 	}
 	document.getElementById('primero').disabled = true;
 	document.getElementById('segundo').disabled = true;
@@ -49,10 +57,14 @@ function mostrar(){
 
 function mostrar2(){
 	if(document.getElementById('cuarto').checked) {
-	document.getElementById('oculto4').style.display = 'block';
+		document.getElementById('oculto4').style.display = 'block';
+		document.getElementById('p4').style.backgroundColor = '#FA5858';// <--- Esto es para que se muestre la <p> de color rojo
+
 	}
 	if(document.getElementById('quinto').checked) {
-	document.getElementById('oculto5').style.display = 'block';
+		document.getElementById('oculto5').style.display = 'block';
+		document.getElementById('p5').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
+
 	}
 	document.getElementById('cuarto').disabled = true;
 	document.getElementById('quinto').disabled = true;
