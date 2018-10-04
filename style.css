@@ -7,11 +7,15 @@ h1{
 }
 .radioBoton:hover {
     background-color: #a9ffd4;
+<<<<<<< HEAD
 }
 .question:checked{
 	background-color: red;
 
 }
+=======
+}s
+>>>>>>> b27936f0fc40872e8c187bbe66ac5353e6f3d268
 
 button:hover {
 	filter: invert(100%);
