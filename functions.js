@@ -5,6 +5,7 @@ function contador() {
 }
 
 function myFunction(){
+	
 	document.getElementById('oculto1').style.display = 'none';
 	document.getElementById('oculto2').style.display = 'none';
 	document.getElementById('oculto3').style.display = 'none';
