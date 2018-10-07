@@ -16,11 +16,20 @@ h1{
 button:hover {
 	filter: invert(100%);
 }
-/*
+
+input[type="radio"] {
+	float: left;
+	margin-right: 10px;
+}
+
+label {
+	display: block
+}
+
 input[type="radio"]:checked + label {
 	background-color: #20f8ff;
 }
-*/
+
 fieldset {
 	border-radius: 5%;
 	background-color: white;
@@ -32,12 +41,16 @@ fieldset {
 	width: 13px;
 }
 
-.contenedor1, .contenedor2, .contenedor3 {
+.contenedor-pregunta {
 	width: 40%;
 	align-self: center;
 }
 
-#oculto1, #oculto2, #oculto3, #oculto4, #oculto5{
+.correctOrNot {
+	display: none;
+}
+
+img.correctOrNot {
 	height: 20px;
-	float:right;	
+	float: right;	
 }
