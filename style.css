@@ -46,8 +46,11 @@ fieldset {
 	align-self: center;
 }
 
+.correctOrNot {
+	display: none;
+}
+
 img.correctOrNot {
-	visibility: hidden;
 	height: 20px;
 	float: right;	
 }

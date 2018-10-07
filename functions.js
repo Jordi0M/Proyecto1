@@ -46,8 +46,8 @@ function resetearPregunta(pregunta) {
 	interruptorBloqueoPreguntas(pregunta, false);
 
 	// Esto es para ocultar si es correcta o no
-	//var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta);
-	//changeVisibity(respuestaRadio, "hidden");
+	// var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta);
+	// changeVisibity(respuestaRadio, false);
 
 }
 
@@ -68,6 +68,8 @@ function validar(pregunta) {
 
 	if (respuestaCorrecta === null) {
 		// mostrar text-area oculto
+		var respuestaTextArea = document.getElementsByClassName("correctOrNot question-"+pregunta);
+		changeVisibity(respuestaTextArea, true);
 	} else {
 		if (respuestaUsuario == respuestaCorrecta) {
 			// poner en verde
@@ -77,15 +79,20 @@ function validar(pregunta) {
 		// mostrar si es o no correcto
 
 		var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta+" answer-"+respuestaUsuario);
-		changeVisibity(respuestaRadio, "visible");
+		changeVisibity(respuestaRadio, true);
 		interruptorBloqueoPreguntas(pregunta, true);
 	}
 		
 }
 
 function changeVisibity(elements, visibility) {
+	var display = 'none';
+	if (visibility == true) {
+		display = 'block';
+	}
+	
 	for (var i = 0; i < elements.length; i++) {
-		elements[i].style.visibility = visibility;
+		elements[i].style.display = display;
 	}
  }
 
