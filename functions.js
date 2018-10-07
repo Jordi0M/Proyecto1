@@ -1,4 +1,7 @@
 /* 			<=== Variables ===> */
+var COLOR_VERDE = "#51ff00";
+var COLOR_ROJO = "#e30000";
+
 // Tipo de pregunta en funcion de su posicion
 var tipoPregunta = [
 	'radio',
@@ -48,7 +51,11 @@ function resetearPregunta(pregunta) {
 	// Esto es para ocultar si es correcta o no
 	// var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta);
 	// changeVisibity(respuestaRadio, false);
+	
+	var respuestaRadio = document.getElementsByClassName("label question-"+pregunta);
+	changeBackgroundColor(respuestaRadio, '');
 
+	desmarcarTodos(pregunta);
 }
 
 function validar(pregunta) {
@@ -71,19 +78,31 @@ function validar(pregunta) {
 		var respuestaTextArea = document.getElementsByClassName("correctOrNot question-"+pregunta);
 		changeVisibity(respuestaTextArea, true);
 	} else {
+		var respuestaRadio = document.getElementsByClassName("label question-"+pregunta+" answer-"+respuestaUsuario);
 		if (respuestaUsuario == respuestaCorrecta) {
-			// poner en verde
+			// Esta ok
+			changeBackgroundColor(respuestaRadio, COLOR_VERDE);
 		} else {
-			// poner en rojo
+			// No esta ok
+			changeBackgroundColor(respuestaRadio, COLOR_ROJO);
 		}
-		// mostrar si es o no correcto
 
-		var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta+" answer-"+respuestaUsuario);
-		changeVisibity(respuestaRadio, true);
+		// mostrar si es o no correcto (imagen)
+		var imagenCorrectOrNot = document.getElementsByClassName("correctOrNot question-"+pregunta+" answer-"+respuestaUsuario);
+		changeVisibity(imagenCorrectOrNot, true);
+
+		// bloqueo de boton de validar pregunta para que no sumes mas intentos, pillin
 		interruptorBloqueoPreguntas(pregunta, true);
 	}
 		
 }
+
+function changeBackgroundColor(elements, color) {
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].style.backgroundColor = color;
+	}
+ }
+
 
 function changeVisibity(elements, visibility) {
 	var display = 'none';
@@ -106,6 +125,15 @@ function interruptorBloqueoPreguntas(pregunta, disabled) {
 	// busca el boton de validar (y su posicion dentro de la array) y lo des/bloqueamos
 	document.getElementsByName('validar-' + pregunta)[0].disabled = disabled;
 }
+
+// se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
+function desmarcarTodos(pregunta) {
+	var opcionesPregunta = document.getElementsByName('question' + pregunta);
+	for (var i = 0; i < opcionesPregunta.length; i++) {
+		opcionesPregunta[i].checked = false;
+	}
+}
+
 
 function preguntaSumaIntentos(posicionPregunta) {
 	if (tipoPregunta[posicionPregunta] === "string") {
