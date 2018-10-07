@@ -1,6 +1,6 @@
 /* 			<=== Variables ===> */
-var COLOR_VERDE = "#51ff00";
-var COLOR_ROJO = "#e30000";
+var color_verde = "#51ff00";
+var color_rojo = "#e30000";
 
 // Tipo de pregunta en funcion de su posicion
 var tipoPregunta = [
@@ -9,9 +9,10 @@ var tipoPregunta = [
 	"string"
 ];
 
+// Esta variable sera dinamica y haremos que al iniciar la pagina sepa cuantas preguntas hay y sus intentos
 var intentosPreguntas = [];
 
-// Valor correcto del option/input
+// Valor correcto del option/input de cada pregunta
 var respuestas = [
 	1,
 	2,
@@ -30,6 +31,14 @@ function init() {
 			intentosPreguntas[n] = 0;
 		}
 	}
+}
+
+// A esta funcion se le llamara siempre que se quiera saber si queremos sumar intentos o no a la pregunta
+function preguntaSumaIntentos(posicionPregunta) {
+	if (tipoPregunta[posicionPregunta] === "string") {
+		return false;
+	}
+	return true;
 }
 
 function sumarIntento(pregunta) {
@@ -51,6 +60,7 @@ function sumaIntentosTotales() {
 	return totalNumeros;
 }
 
+// se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
 function interruptorBloqueoPreguntas(pregunta, disabled) {
 	var opcionesPregunta = document.getElementsByName("question" + pregunta);
 	for (var i = 0; i < opcionesPregunta.length; i++) {
@@ -66,15 +76,6 @@ function desmarcarTodos(pregunta) {
 	for (var i = 0; i < opcionesPregunta.length; i++) {
 		opcionesPregunta[i].checked = false;
 	}
-}
-
-// se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
-function preguntaSumaIntentos(posicionPregunta) {
-	if (tipoPregunta[posicionPregunta] === "string") {
-		return false;
-	}
-
-	return true;
 }
 
 function resetearPregunta(pregunta) {
@@ -113,10 +114,10 @@ function validar(pregunta) {
 		var respuestaRadio = document.getElementsByClassName("label question-"+pregunta+" answer-"+respuestaUsuario);
 		if (respuestaUsuario == respuestaCorrecta) {
 			// Esta ok
-			changeBackgroundColor(respuestaRadio, COLOR_VERDE);
+			changeBackgroundColor(respuestaRadio, color_verde);
 		} else {
 			// No esta ok
-			changeBackgroundColor(respuestaRadio, COLOR_ROJO);
+			changeBackgroundColor(respuestaRadio, color_rojo);
 		}
 
 		// mostrar si es o no correcto (imagen)
