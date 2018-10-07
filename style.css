@@ -54,3 +54,7 @@ img.correctOrNot {
 	height: 20px;
 	float: right;	
 }
+
+textarea {
+	resize: none;
+  }
