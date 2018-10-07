@@ -7,7 +7,6 @@ var tipoPregunta = [
 ];
 
 var intentosPreguntas = [];
-var intentosPreguntasTotal = 0;
 
 // Valor correcto del option/input
 var respuestas = [
@@ -69,9 +68,7 @@ function validar(pregunta) {
 		return false;
 	}
 
-	if (preguntaSumaIntentos(pregunta)) {
-		intentosPreguntas[posicionPregunta]++;
-	}
+	sumarIntento(pregunta);
 
 	// cogia el valor (value) de la pregunta (radio/string)
 	var respuestaUsuario = respuestaPregunta(posicionPregunta);
@@ -149,4 +146,23 @@ function respuestaPregunta(posicionPregunta) {
 	}
 	
 	return respuesta;
+}
+
+function sumarIntento(pregunta) {
+	var posicionPregunta = pregunta - 1;
+
+	if (preguntaSumaIntentos(posicionPregunta)) {
+		intentosPreguntas[posicionPregunta]++;
+		document.getElementById('intentos-'+pregunta).innerHTML=intentosPreguntas[posicionPregunta];
+		document.getElementById('intentos-totales').innerHTML=sumaIntentosTotales();
+	}
+}
+
+function sumaIntentosTotales() {
+	var totalNumeros = 0;
+	for (i = 0; i < intentosPreguntas.length; i++) {
+		totalNumeros += intentosPreguntas[i];
+	}
+
+	return totalNumeros;
 }

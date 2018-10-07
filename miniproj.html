@@ -36,7 +36,7 @@
 					<img class="correctOrNot" src="incorrecto.png">
 				</p>
 
-				<p class="contador">Intento:</p>
+				<p class="contador">Intento:  <span id="intentos-1">0</span></p>
 			</fieldset>
 		</div>
 		<div class="contenedor-pregunta">
@@ -47,22 +47,21 @@
 				</legend>
 				<p>Texto pregunta 2</p>
 				<p class="radioBoton">
-					<input name="question2" type="radio" value="1">
-					<label for="verdadero">Verdadero</label>
+					<input id="p2_r1" name="question2" type="radio" value="1">
+					<label for="p2_r1">Verdadero</label>
 					<img class="correctOrNot" src="incorrecto.png">
 				</p>
 				<p class="radioBoton">
-					<input name="question2" type="radio" value="2">
-					<label for="falso">Falso</label>
+					<input id="p2_r2" name="question2" type="radio" value="2">
+					<label for="p2_r2">Falso</label>
 					<img class="correctOrNot" src="correcto.png">
 				</p>
-				<p class="contador">Intento:</p>
+				<p class="contador">Intento: <span id="intentos-2">0</span></p>
 			</fieldset>
 		</div>
 		<div class="contenedor-pregunta">
 			<fieldset id="pregunta-3">
 				<legend>Pregunta 3
-					<button type="button" onclick="reset(3)"><img class="topButton" src="reload.png"></button>
 					<button type="button" onclick="validar(3)"><img class="topButton" src="check.png"></button>
 				</legend>
 				<p>Texto de pregunta 3</p>
@@ -72,7 +71,7 @@
 		</div>
 	</form>
 	<div>
-		<h3 class="tryedGlobal">Intentos Globales: </h3>
+		<h3 class="tryedGlobal">Intentos Globales:  <span id="intentos-totales">0</span></h3>
 	</div>
 </body>
 
