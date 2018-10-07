@@ -41,22 +41,17 @@ function contador() {
 	contadorPregunta1 += 1;
 }
 
+
+function resetearPregunta(pregunta) {
+	interruptorBloqueoPreguntas(pregunta, false);
+
+}
+
 function refresh1() {
 	document.getElementById('p1').style.backgroundColor = ' #ff5733';
 	document.getElementById('p2').style.backgroundColor = ' #ff5733';
 	document.getElementById('p3').style.backgroundColor = ' #ff5733';
 
-}
-
-function refresh2() {
-	document.getElementById('p4').style.backgroundColor = ' #ff5733';
-	document.getElementById('p5').style.backgroundColor = ' #ff5733';
-}
-
-function refresh3() {
-	document.getElementById('respuestaVerdadera').hidden = true;
-	document.getElementById('oculto6').style.display = 'none';
-	document.getElementById('oculto7').style.display = 'none';
 }
 
 function validar(pregunta) {
@@ -91,16 +86,14 @@ function validar(pregunta) {
 	// document.getElementById('oculto4').style.visibility = 'visible';
 }
 
-// se dedica a bloquear o desbloquear los input de las preguntas
+// se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
 function interruptorBloqueoPreguntas(pregunta, disabled) {
-	if (disabled === undefined) {
-		disabled = false;
-	}
-
 	var opcionesPregunta = document.getElementsByName('question' + pregunta);
 	for (var i = 0; i < opcionesPregunta.length; i++) {
 		opcionesPregunta[i].disabled = disabled;
 	}
+	// busca el boton de validar (y su posicion dentro de la array) y lo des/bloqueamos
+	document.getElementsByName('validar-' + pregunta)[0].disabled = disabled;
 }
 
 function preguntaSumaIntentos(posicionPregunta) {
@@ -110,16 +103,6 @@ function preguntaSumaIntentos(posicionPregunta) {
 
 	return true;
 }
-
-function validar1() {
-	if (document.getElementById('primero').checked) {
-		document.getElementById('oculto1').style.display = 'block';
-		document.getElementById('p1').style.backgroundColor = '#81F781';// <--- Esto es para que se muestre la <p> de color verde
-
-	}
-	document.getElementById('primero').disabled = true;
-}
-
 
 function respuestaPregunta(posicionPregunta) {
 	var respuesta = null;

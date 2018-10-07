@@ -13,8 +13,8 @@
 		<div class="contenedor-pregunta">
 			<fieldset id="pregunta-1">
 				<legend>Pregunta 1
-					<button type="button" value="" onclick="reset(1)" class="botonaco"><img class="topButton" src="reload.png"></button>
-					<button type="button" onclick="validar(1)"><img class="topButton" src="check.png"></button>
+					<button type="button" value="" onclick="resetearPregunta(1)" 	><img class="topButton" src="reload.png"></button>
+					<button type="button" name="validar-1" onclick="validar(1)"><img class="topButton" src="check.png"></button>
 				</legend>
 				
 				<p>Texto de pregunta 1</p>
@@ -42,8 +42,8 @@
 		<div class="contenedor-pregunta">
 			<fieldset id="pregunta-2">
 				<legend>Pregunta 2
-					<button type="button" onclick="reset(2)"><img class="topButton" src="reload.png"></button>
-					<button type="button" onclick="validar(2)"><img class="topButton" src="check.png"></button>
+					<button type="button" onclick="resetearPregunta(2)"><img class="topButton" src="reload.png"></button>
+					<button type="button" name="validar-2" onclick="validar(2)"><img class="topButton" src="check.png"></button>
 				</legend>
 				<p>Texto pregunta 2</p>
 				<p class="radioBoton">
@@ -62,7 +62,7 @@
 		<div class="contenedor-pregunta">
 			<fieldset id="pregunta-3">
 				<legend>Pregunta 3
-					<button type="button" onclick="validar(3)"><img class="topButton" src="check.png"></button>
+					<button type="button" name="validar-3" onclick="validar(3)"><img class="topButton" src="check.png"></button>
 				</legend>
 				<p>Texto de pregunta 3</p>
 				<textarea name="question3">Escribe tu respuesta!</textarea> <br>
