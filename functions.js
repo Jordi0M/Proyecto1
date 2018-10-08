@@ -62,13 +62,17 @@ function sumaIntentosTotales() {
 }
 
 // se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
-function interruptorBloqueoPreguntas(pregunta, disabled) {
+function interruptorBloqueoPreguntas(pregunta, disabled, semaforo) {
 	var opcionesPregunta = document.getElementsByName("question" + pregunta);
 	for (var i = 0; i < opcionesPregunta.length; i++) {
 		opcionesPregunta[i].disabled = disabled;
 	}
 	// busca el boton de validar (y su posicion dentro de la array) y lo des/bloqueamos
 	document.getElementsByName("validar-" + pregunta)[0].disabled = disabled;
+
+	if (semaforo == true) {
+		document.getElementsByName("refresh-" + pregunta)[0].disabled = disabled;
+	}
 }
 
 // Este es el boton de resetear las preguntas
@@ -95,6 +99,7 @@ function resetearPregunta(pregunta) {
 function validar(pregunta) {
 	// Sumamos el intento a labela pregunta
 	var posicionPregunta = pregunta - 1;
+	var semaforo = false;
 
 	if (tipoPregunta[posicionPregunta] === undefined) {
 		alert("La pregunta que intentas responder no existe");
@@ -122,6 +127,9 @@ function validar(pregunta) {
 		if (respuestaUsuario == respuestaCorrecta) {
 			// Esta ok
 			changeBackgroundColor(respuestaRadio, color_verde);
+			semaforo = true;
+
+
 
 		} else {
 			// No esta ok
@@ -133,7 +141,7 @@ function validar(pregunta) {
 		changeVisibity(imagenCorrectOrNot, true);
 
 		// bloqueo de boton de validar pregunta para que no sumes mas intentos, pillin
-		interruptorBloqueoPreguntas(pregunta, true);
+		interruptorBloqueoPreguntas(pregunta, true, semaforo);
 	}
 		
 }
