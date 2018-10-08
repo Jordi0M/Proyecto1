@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+=======
+body{
+	width: 100%;
+	  background: rgb(247,247,247);
+	  background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(32,248,255,1) 100%); }
+h1{
+	text-align: center;
+}
+.radioBoton:hover {
+    background-color: #a9ffd4;
+}
+
+.question:checked{
+	background-color: red;
+}
+
+button:hover {
+	filter: invert(100%);
+}
+
+input[type="radio"] {
+	float: left;
+	margin-right: 10px;
+}
+
+label {
+	display: block
+}
+
+input[type="radio"]:checked + label {
+	background-color: #20f8ff;
+}
+
+fieldset {
+	border-radius: 5%;
+	background-color: white;
+	border: 2px ridge;
+}
+
+.topButton {
+	height: 13px;
+	width: 13px;
+}
+
+.contenedor-pregunta {
+	width: 40%;
+	align-self: center;
+}
+
+.correctOrNot {
+	display: none;
+}
+
+img.correctOrNot {
+	height: 20px;
+	float: right;	
+}
+>>>>>>> 5db35acdeaa0789adde050fee38de2d043bc7e19

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cuestionario</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" defer src="functions.js"></script>
+</head>
+
+<body>
+	<h1>Cuestionario</h1>
+	<form>
+		<div class="contenedor-pregunta">
+			<fieldset id="pregunta-1">
+				<legend>Pregunta 1
+					<button type="button" value="" onclick="resetearPregunta(1)" 	><img class="topButton" src="reload.png"></button>
+					<button type="button" name="validar-1" onclick="validar(1)"><img class="topButton" src="check.png"></button>
+				</legend>
+				
+				<p>Texto de pregunta 1</p>
+				<p class="radioBoton">
+					<img class="correctOrNot question-1 answer-1" src="correcto.png">
+					<input id="p1_r1" name="question1" type="radio" value="1">
+					<label class="label question-1 answer-1" for="p1_r1">texto1</label>
+				</p>
+
+				<p class="radioBoton">
+					<img class="correctOrNot question-1 answer-2" src="incorrecto.png">
+					<input id="p1_r2" name="question1" type="radio" value="2">
+					<label class="label question-1 answer-2" for="p1_r2">texto2</label>
+				</p>
+
+				<p class="radioBoton">
+					<img class="correctOrNot question-1 answer-3" src="incorrecto.png">
+					<input id="p1_r3" name="question1" type="radio" value="3">
+					<label class="label question-1 answer-3" for="p1_r3">texto3</label>
+				</p>
+
+				<p class="contador">Intento:  <span id="intentos-1">0</span></p>
+			</fieldset>
+		</div>
+		<div class="contenedor-pregunta">
+			<fieldset id="pregunta-2">
+				<legend>Pregunta 2
+					<button type="button" onclick="resetearPregunta(2)"><img class="topButton" src="reload.png"></button>
+					<button type="button" name="validar-2" onclick="validar(2)"><img class="topButton" src="check.png"></button>
+				</legend>
+				<p>Texto pregunta 2</p>
+				<p class="radioBoton">
+					<img class="correctOrNot question-2 answer-1" src="incorrecto.png">
+					<input id="p2_r1" name="question2" type="radio" value="1">
+					<label class="label question-2 answer-1" for="p2_r1">Verdadero</label>
+				</p>
+				<p class="radioBoton">
+					<img class="correctOrNot question-2 answer-2" src="correcto.png">
+					<input id="p2_r2" name="question2" type="radio" value="2">
+					<label class="label question-2 answer-2" for="p2_r2">Falso</label>
+				</p>
+				<p class="contador">Intento: <span id="intentos-2">0</span></p>
+			</fieldset>
+		</div>
+		<div class="contenedor-pregunta">
+			<fieldset id="pregunta-3">
+				<legend>Pregunta 3
+					<button type="button" name="validar-3" onclick="validar(3)"><img class="topButton" src="check.png"></button>
+				</legend>
+				<p>Texto de pregunta 3</p>
+				<textarea name="question3">Escribe tu respuesta!</textarea> <br>
+				<textarea class="correctOrNot question-3" disabled="true">La Respuesta era esta!</textarea>
+			</fieldset>
+		</div>
+	</form>
+	<div>
+		<h3 class="tryedGlobal">Intentos Globales:  <span id="intentos-totales">0</span></h3>
+	</div>
+</body>
+
+</html>
