@@ -24,6 +24,7 @@ init();
 
 
 /* 			<=== FUNCIONES ===> */
+// Rellena la array de los intentos a 0
 function init() {
 	// Rellenamos los intentos de preguntas que no sean de string
 	for (var n = 0; n < tipoPregunta.length; n++) {
@@ -70,7 +71,7 @@ function interruptorBloqueoPreguntas(pregunta, disabled) {
 	document.getElementsByName("validar-" + pregunta)[0].disabled = disabled;
 }
 
-// se dedica a bloquear o desbloquear los input de las preguntas en funcion de lo que queramos
+// Este es el boton de resetear las preguntas
 function desmarcarTodos(pregunta) {
 	var opcionesPregunta = document.getElementsByName("question" + pregunta);
 	for (var i = 0; i < opcionesPregunta.length; i++) {
@@ -92,18 +93,24 @@ function resetearPregunta(pregunta) {
 }
 
 function validar(pregunta) {
-	// Sumamos el intento a la pregunta
+	// Sumamos el intento a labela pregunta
 	var posicionPregunta = pregunta - 1;
 
 	if (tipoPregunta[posicionPregunta] === undefined) {
 		alert("La pregunta que intentas responder no existe");
 		return false;
 	}
+	
+	var respuestaUsuario = respuestaPregunta(posicionPregunta);
+
+	if (noCheckeada(respuestaUsuario) === true) {
+		alert("Responde alguna pregunta antes");
+		return false;
+	}
 
 	sumarIntento(pregunta);
 
 	// cogia el valor (value) de la pregunta (radio/string)
-	var respuestaUsuario = respuestaPregunta(posicionPregunta);
 	var respuestaCorrecta = respuestas[posicionPregunta];
 
 	if (respuestaCorrecta === null) {
@@ -128,6 +135,13 @@ function validar(pregunta) {
 		interruptorBloqueoPreguntas(pregunta, true);
 	}
 		
+}
+
+function noCheckeada(respuesta) {
+	if (respuesta !== true) {
+		return false
+	}
+	return true
 }
 
 function changeBackgroundColor(elements, color) {
@@ -166,11 +180,15 @@ function respuestaPregunta(posicionPregunta) {
 
 				// respuesta hará tmb de condicion de salida del bucle
 			}
-		}		
+		}
+
 	} else {
 		// si no es radio directamente le pasamos el texto del text-area
 		respuesta = opcionesPregunta[0].value;
 	}
+
+	if (respuesta == null)
+		return true;	
 	
 	return respuesta;
 }
