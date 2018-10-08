@@ -83,8 +83,8 @@ function resetearPregunta(pregunta) {
 	interruptorBloqueoPreguntas(pregunta, false);
 
 	// Esto es para ocultar si es correcta o no
-	// var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta);
-	// changeVisibity(respuestaRadio, false);
+	var respuestaRadio = document.getElementsByClassName("correctOrNot question-"+pregunta);
+	changeVisibity(respuestaRadio, false);
 	
 	var respuestaRadio = document.getElementsByClassName("label question-"+pregunta);
 	changeBackgroundColor(respuestaRadio, "");
@@ -122,6 +122,7 @@ function validar(pregunta) {
 		if (respuestaUsuario == respuestaCorrecta) {
 			// Esta ok
 			changeBackgroundColor(respuestaRadio, color_verde);
+
 		} else {
 			// No esta ok
 			changeBackgroundColor(respuestaRadio, color_rojo);
